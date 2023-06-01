@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<h1 class="py-5">Admin Dashboard</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>
+    Number of Products
+    </th>
+    <th>
+    Number of Categories
+    </th>
+  </tr>
+
+    <td>
+    <%= @product_count %>
+    </td>
+    <td>
+    <%= @category_count %>
+    </td>
+</table>
