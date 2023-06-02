@@ -1,0 +1,27 @@
+
+<header class="page-header">
+  <h1>Signup!</h1>
+</header>
+
+<%= form_for @user, url: users_path do |f| %>
+
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger">
+      <strong>Signup failed: </strong>
+      <ul>
+        <% @user.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+    <ul class="py-2">First Name: <%= f.text_field :first_name %></ul>
+    <ul class="py-2">Last Name: <%= f.text_field :last_name %></ul>
+    <ul class="py-2">Email: <%= f.text_field :email %></ul>
+    <ul class="py-2">Password: <%= f.password_field :password %></ul>
+    <ul class="py-2">Password Confirmation: <%= f.password_field :password_confirmation %></ul>
+    <ul class="py-2"><%= f.submit "Submit" %></ul>
+
+<% end %>
