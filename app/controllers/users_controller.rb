@@ -3,9 +3,13 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # def name
-  #   # "#{first_name} #{last_name}"
-  # end
+  def authenticate_with_credentials(email, password)
+    # strip to remove any leading/trailing whitespaces and downcase convert email to lowercase.
+    user = User.find_by(email: email.strip.downcase)
+    return nil unless user
+
+    user.authenticate(password) ? user : nill
+  end
 
   def create
     @user = User.new(user_params)
