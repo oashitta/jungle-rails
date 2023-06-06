@@ -95,11 +95,57 @@ RSpec.describe User, type: :model do
         expect(@user1.save).to be true
         expect(@user2.save).to be false
       end
-
     end
   end 
-  describe '.authenticate_with_credentials' do
+
+
+  describe 'authenticate_with_credentials' do
+    email = 'john@doe.com' 
+    password = 'signin'
+
+  
+    let!(:user) do
+      User.create(
+        first_name: 'John',
+        last_name: 'Doe',
+        email: email,
+        password: password,
+        password_confirmation: password
+      )
+    end
+
+    it 'should return nil if email does not exist' do
+      expect(User.authenticate_with_credentials('doesnot@exist.com', password)).to be_nil
+    end
     
+    it 'should return nil if wrong password is provided' do
+      expect(User.authenticate_with_credentials(email, 'wrongpassword')).to be_nil
+    end
+
+    it 'should return nil if password is not provided' do
+      expect(User.authenticate_with_credentials(user.email)).to be_nil
+    end
+
+    it 'should return nil if email is not provided' do
+      expect(User.authenticate_with_credentials(user.password)).to be_nil
+    end
+
+    it 'should return nil if email and password are not provided' do
+      expect(User.authenticate_with_credentials()).to be_nil
+    end
+    
+    it 'should return user if email and password are correct' do
+      expect(User.authenticate_with_credentials(email, password)).to eql(user)
+    end
+
+
+    it "should login and return user if there are trailing spaces before email address" do
+      expect(User.authenticate_with_credentials(' john@doe.com', password)).to eql(user)
+    end
+
+    it "should login return user if there are wrong cases in email address" do
+      expect(User.authenticate_with_credentials('joHn@doe.cOm', password)).to eql(user)
+    end
   end
 
 end
