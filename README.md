@@ -4,6 +4,8 @@ A mini e-commerce application built with Rails 6.1. The application enables shop
 
 Certain functions(contained in the admin dashboard) are only available to the Admin who need to be authenticated to have access to add and delete products, create categories and view a dashboard of all available products.
 
+Users are able to shop on the app as guest(without an account) or as a logged in user (after creating an account). Passwords are stored securely leveraging on the bcrypt.
+
 ## App Images
 
 !["screenshot of Homepage"](https://github.com/oashitta/jungle-rails/blob/master/docs/Homepage.png?raw=true)
