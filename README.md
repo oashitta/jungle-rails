@@ -6,12 +6,12 @@ Certain functions(contained in the admin dashboard) are only available to the Ad
 
 ## App Images
 
-!["screenshot of Homepage"](url)
-!["screenshot of Homepage product display"](url)
-!["screenshot of My cart"](url)
-!["screenshot of Admin dashboard"](url)
-!["screenshot of Admin- add and view all products"](url)
-!["screenshot of Payment Modal"](url)
+!["screenshot of Homepage"](https://github.com/oashitta/jungle-rails/blob/master/docs/Homepage.png?raw=true)
+!["screenshot of Homepage product display"](https://github.com/oashitta/jungle-rails/blob/master/docs/Home_page_product_layout.png?raw=true)
+!["screenshot of My cart"](https://github.com/oashitta/jungle-rails/blob/master/docs/My_cart.png?raw=true)
+!["screenshot of Admin dashboard"](https://github.com/oashitta/jungle-rails/blob/master/docs/Admin_dashboard.png?raw=true)
+!["screenshot of Admin- add and view all products"](https://github.com/oashitta/jungle-rails/blob/master/docs/Admin_add_and_view_all_products.png?raw=true)
+!["screenshot of Payment Modal"](https://github.com/oashitta/jungle-rails/blob/master/docs/Payment_page.png?raw=true)
 
 ## Getting Started
 
