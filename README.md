@@ -42,4 +42,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - PostgreSQL 9.x
 - Stripe - payment provider
 - Cypress 9.7.0
-  rspec-rails 5.1
+- rspec-rails 5.1
